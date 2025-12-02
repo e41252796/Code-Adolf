@@ -1,0 +1,143 @@
+:root {
+    --gradient-merah: linear-gradient(to bottom, #ff4d4d 0%, #cc0000 100%);
+    --merah-solid: #FE0000;
+    --bg-dark: #111;
+    --font-orbitron: 'Orbitron', sans-serif;
+    --font-exo: 'Exo 2', sans-serif;
+    --bg-linear-gray: linear-gradient(to right, #1A1A1A, #4D4D4D);
+}
+
+html, body {
+    height: 100%; margin: 0; padding: 0; width: 100%;
+    overscroll-behavior-y: none; 
+    font-family: VAR(--font-exo);
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+p {
+    font-style: italic;
+    font-family: var(--font-exo);
+}
+
+
+.navbar {
+    background: var(--bg-linear-gray);
+    border-bottom: 2px solid #333;
+    position: fixed; top: 0; left: 0; width: 100%;
+    z-index: 1000; 
+}
+.navbar-brand span {
+    font-family: VAR(--font-exo);
+    letter-spacing: 1px;
+    font-style: italic;
+    font-weight: bold;
+}
+.nav-link {
+    font-family: var(--font-orbitron);
+    letter-spacing: 1px;
+    color: #ffffff !important;
+    margin-left: 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    font-style: normal !important; 
+    font-weight: bold;
+    -webkit-text-stroke: 0.8px black;
+}
+.nav-link:hover {
+    color: #ff0000 !important;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+.nav-link.active {
+    color: #ff0000 !important;
+}
+
+.banner-utama {
+    width: 100%; height: 250px; 
+    background: black; position: relative; overflow: hidden;
+    opacity: 0.6; margin-top: 88px; 
+}
+.banner-utama .carousel, .banner-utama .carousel-inner, .banner-utama .carousel-item {
+    height: 100%; 
+}
+.banner-utama img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 43%; opacity: 0.6;
+}
+
+.kotak-putih-melayang {
+    background-color: #e9e9e9;
+    border-radius: 15px; padding: 40px; text-align: center;
+    font-weight: bold; max-width: 850px;
+    margin: 25px auto 50px auto; 
+    position: relative; z-index: 10;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.kotak-putih-melayang h2 {
+    font-family: var(--font-orbitron);
+    font-weight: 900; text-transform: uppercase;
+    letter-spacing: 2px; margin-bottom: 20px;
+    color: var(--merah-solid); font-size: 2.5rem; 
+    -webkit-text-stroke: 1px black;
+    filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.1));
+    font-style: normal;
+}
+.kotak-putih-melayang p { font-style: italic; }
+
+.tombol-merah {
+    background-color: #FF0000; color: white;
+    padding: 10px 30px; border: none; border-radius: 5px;
+    font-weight: bold; cursor: pointer; transition: 0.3s;
+    font-family: var(--font-exo); font-style:italic;
+}
+.tombol-merah:hover { background-color: darkred; transform: scale(1.05); }
+
+.kotak-gelap {
+    background-color: #262626; color: white;
+    padding: 30px; border-radius: 10px; border: 1px solid #444;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5); height: 100%;
+    font-style: italic; 
+}
+.kotak-gelap ul li { font-family: var(--font-exo); font-style: italic; }
+
+.judul-merah {
+    font-family: var(--font-orbitron);
+    font-weight: 900; text-transform: uppercase;
+    letter-spacing: 3px; margin-bottom: 25px;
+    background: var(--gradient-merah); -webkit-background-clip: text;
+    background-clip: text; color: transparent !important;
+    font-size: 2rem; -webkit-text-stroke: 1px black; 
+    filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.5)); 
+    font-style: normal;
+}
+.kotak-warna {
+    width: 50px; height: 50px; border: 1px solid gray;
+    margin-right: 10px; flex-shrink: 0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.custom-footer {
+    background: var(--bg-linear-gray);
+    padding-top: 15px; padding-bottom: 5px; margin-top: 40px;
+    position: relative; z-index: 10; width: 100%;
+    border-top: 2px solid #333; clear: both;
+}
+.footer-title {
+    font-family: var(--font-orbitron);
+    color: var(--merah-solid);
+    font-weight: 800; font-size: 0.9rem;
+    margin-bottom: 10px; text-transform: uppercase;
+    -webkit-text-stroke: 0.5px black; letter-spacing: 0.5px;
+}
+.footer-text, .custom-footer p, .footer-menu a {
+    font-family: var(--font-exo); font-style: normal !important; 
+    color: #d3d3d3; font-size: 0.8rem; line-height: 1.4; margin-bottom: 5px;
+}
+.footer-menu { padding-left: 0; margin-bottom: 0; }
+.footer-menu li { margin-bottom: 3px; }
+.footer-menu a { text-decoration: none; transition: color 0.3s; }
+.footer-menu a:hover { color: var(--merah-solid); }
+.footer-logo-img { height: 35px !important; width: auto; margin-right: 10px; }
+.ig-icon-wrapper img { width: 50px; height: 50px; margin-top: 5px; }
+.ig-icon-wrapper:hover img { transform: scale(1.1); transition: transform 0.3s ease; }
+.ig-icon-wrapper { color: transparent; }

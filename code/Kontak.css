@@ -1,0 +1,274 @@
+:root {
+    --gradient-merah: linear-gradient(to bottom, #ff4d4d 0%, #cc0000 100%);
+    --merah-solid: #FE0000;
+    --bg-dark: #111;
+    --font-orbitron: 'Orbitron', sans-serif;
+    --font-exo: 'Exo 2', sans-serif;
+    --bg-linear-gray: linear-gradient(to right, #1A1A1A, #4D4D4D);
+}
+
+html, body {
+    height: 100%; margin: 0; padding: 0; width: 100%;
+    overscroll-behavior-y: none; 
+    font-family: VAR(--font-exo);
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+p {
+    font-style: italic;
+    font-family: var(--font-exo);
+}
+
+.navbar {
+    background: var(--bg-linear-gray);
+    border-bottom: 2px solid #333;
+    position: fixed; top: 0; left: 0; width: 100%;
+    z-index: 1000; 
+}
+.navbar-brand span {
+    font-family: VAR(--font-exo);
+    letter-spacing: 1px;
+    font-style: italic;
+    font-weight: bold;
+}
+.nav-link {
+    font-family: var(--font-orbitron);
+    letter-spacing: 1px;
+    color: #ffffff !important;
+    margin-left: 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    font-style: normal !important; 
+    font-weight: bold;
+    -webkit-text-stroke: 0.8px black;
+}
+.nav-link:hover {
+    color: #ff0000 !important;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+.nav-link.active {
+    color: #ff0000 !important;
+}
+
+.kontak-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 120px 20px 50px 20px;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.contact-us {
+    background-color: #2b2b2b;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-2 {
+    background-color: #5b5b5b;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.text-wrapper-11 {
+    font-family: var(--font-exo);
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0;
+}
+
+.contact-form {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nama, .email, .aspirasi {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    height: auto; 
+}
+
+.text-wrapper-12, .text-wrapper-13, .text-wrapper-14 {
+    position: static;
+    color: #ffffff;
+    font-family: var(--font-exo);
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.frame, .frame-2, .frame-3 {
+    position: static;
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    padding: 0 15px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.frame-3 {
+    height: 120px;
+    padding: 10px;
+}
+
+/* Tombol Kirim */
+.tombol {
+    margin: 10px 0 0 0;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+}
+
+.rectangle-3 {
+    position: static;
+    width: 100%;
+    height: 50px;
+    background-color: #ff0000;
+    border-radius: 10px;
+    color: white;
+    font-family: var(--font-exo);
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.rectangle-3:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+}
+
+.text-wrapper-15 {
+    position: static;
+}
+.erich-fromm {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.erich-fromm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('FotoBakground.png');
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.25;
+    z-index: -1;
+    filter: grayscale(100%);
+}
+
+blockquote {
+    padding: 20px 10px;
+    text-align: center;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bahaya-masa-lalu {
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+}
+
+.text-wrapper-10 {
+    display: inline-block;
+    margin-top: 40px;
+    font-weight: 900;
+    font-size: 38px;
+    color: #000;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    border-bottom: 5px solid #000;
+    padding-bottom: 5px;
+    font-style: italic; 
+}
+
+.instagram-link {
+    position: static;
+    margin-top: auto;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.instagram-link img.ellipse-2 {
+    width: 60px;
+    height: 60px;
+    margin-right: 0;
+}
+
+.instagram-link .text-wrapper-9 {
+    font-size: 28px;
+    font-weight: 800;
+    font-family: Arial, sans-serif;
+}
+
+.custom-footer {
+    background: var(--bg-linear-gray);
+    padding-top: 15px; padding-bottom: 5px; margin-top: 40px;
+    position: relative; z-index: 10; width: 100%;
+    border-top: 2px solid #333; clear: both;
+}
+.footer-title {
+    font-family: var(--font-orbitron);
+    color: var(--merah-solid);
+    font-weight: 800; font-size: 0.9rem;
+    margin-bottom: 10px; text-transform: uppercase;
+    -webkit-text-stroke: 0.5px black; letter-spacing: 0.5px;
+}
+.footer-text, .custom-footer p, .footer-menu a {
+    font-family: var(--font-exo); font-style: normal !important; 
+    color: #d3d3d3; font-size: 0.8rem; line-height: 1.4; margin-bottom: 5px;
+}
+.footer-menu { padding-left: 0; margin-bottom: 0; }
+.footer-menu li { margin-bottom: 3px; }
+.footer-menu a { text-decoration: none; transition: color 0.3s; }
+.footer-menu a:hover { color: var(--merah-solid); }
+.footer-logo-img { height: 35px !important; width: auto; margin-right: 10px; }
+.ig-icon-wrapper img { width: 50px; height: 50px; margin-top: 5px; }
+.ig-icon-wrapper:hover img { transform: scale(1.1); transition: transform 0.3s ease; }
+.ig-icon-wrapper { color: transparent; }
+

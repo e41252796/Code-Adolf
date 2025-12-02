@@ -1,0 +1,222 @@
+:root {
+    --gradient-merah: linear-gradient(to bottom, #ff4d4d 0%, #cc0000 100%);
+    --merah-solid: #FE0000;
+    --bg-dark: #111;
+    --font-orbitron: 'Orbitron', sans-serif;
+    --font-exo: 'Exo 2', sans-serif;
+    --bg-linear-gray: linear-gradient(to right, #1A1A1A, #4D4D4D);
+}
+
+html, body {
+    height: 100%; margin: 0; padding: 0; width: 100%;
+    overscroll-behavior-y: none; 
+    font-family: VAR(--font-exo);
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+p {
+    font-style: italic;
+    font-family: var(--font-exo);
+}
+
+/* NAVBAR STYLE */
+.navbar {
+    background: var(--bg-linear-gray);
+    border-bottom: 2px solid #333;
+    position: fixed; top: 0; left: 0; width: 100%;
+    z-index: 1000; 
+}
+.navbar-brand span {
+    font-family: VAR(--font-exo);
+    letter-spacing: 1px;
+    font-style: italic;
+    font-weight: bold;
+}
+.nav-link {
+    font-family: var(--font-orbitron);
+    letter-spacing: 1px;
+    color: #ffffff !important;
+    margin-left: 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    font-style: normal !important; 
+    font-weight: bold;
+    -webkit-text-stroke: 0.8px black;
+}
+.nav-link:hover {
+    color: #ff0000 !important;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+.nav-link.active {
+    color: #ff0000 !important;
+}
+
+/* BANNER UTAMA */
+.banner-utama {
+    width: 100%; height: 250px; 
+    background: black; position: relative; overflow: hidden;
+    opacity: 0.6; margin-top: 88px; 
+}
+.banner-utama .carousel, .banner-utama .carousel-inner, .banner-utama .carousel-item {
+    height: 100%; 
+}
+.banner-utama img {
+    width: 100%; height: 100%;
+    object-fit: cover; 
+    object-position: center 43%; 
+    opacity: 90%;
+}
+
+/* CONTENT STYLES (PAKET B) */
+/* =========================================
+   PERBAIKAN CONTENT STYLES (FLEXBOX)
+   ========================================= */
+
+/* 1. Container Utama untuk membungkus Form dan Quote */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Banner cukup tinggi dan gagah */
+    overflow: hidden;
+    background-color:#ffffff ;
+}
+
+.banner img {
+   width: 100%; height: 100%;
+    object-fit: cover; object-position: center 23%; opacity: 60%;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 40px;
+    left: 5%; /* Menggunakan % agar responsif di HP */
+    right: 5%;
+    color: #000000;
+    max-width: 800px;
+}
+
+.banner-text h2 {
+   font-family: var(--font-orbitron);
+   font-size: clamp(24px, 4vw, 36px); /* Ukuran font dinamis sesuai layar */
+   color: #ff0000;
+   margin-bottom: 15px;
+   text-transform: uppercase;
+   text-shadow: 2px 2px 4px black;
+}
+
+.banner-text p {
+    font-family: var(--font-exo);
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* =========================================
+   4. BERITA CARDS (Gaya Hari Ini)
+   ========================================= */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    /* PENTING: Agar kartu turun ke bawah saat di layar HP */
+    flex-wrap: wrap; 
+}
+
+.news-card {
+    width: 320px; /* Lebar kartu ideal */
+    background-color: #2b2b2b;
+    color: white;
+    border-radius: 15px;
+    border: 2px solid #ff3b3b;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-10px); /* Efek melayang saat hover */
+}
+
+.news-image {
+    width: 100%;
+    height: 250px;
+    border-bottom: 2px solid #ff3b3b;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.1); /* Zoom in gambar saat hover */
+}
+
+.news-card p {
+    font-family: var(--font-exo);
+    font-size: 14px;
+    padding: 20px;
+    margin: 0;
+    line-height: 1.6;
+    text-align: justify;
+    color: #e0e0e0;
+}
+
+/* Dots Style */
+.dot-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 60px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.dot.black { background-color: #1a1a1a; }
+.dot.gray { background-color: #7d7d7d; }
+.dot.white { background-color: #ffffff; border: 1px solid #ccc; }
+.dot:hover { border-color: #ff0000; transform: scale(1.2); }
+
+
+/* COMPACT FOOTER */
+.custom-footer {
+    background: var(--bg-linear-gray);
+    padding-top: 15px; padding-bottom: 5px; margin-top: 40px;
+    position: relative; z-index: 10; width: 100%;
+    border-top: 2px solid #333; clear: both;
+}
+.footer-title {
+    font-family: var(--font-orbitron);
+    color: var(--merah-solid);
+    font-weight: 800; font-size: 0.9rem;
+    margin-bottom: 10px; text-transform: uppercase;
+    -webkit-text-stroke: 0.5px black; letter-spacing: 0.5px;
+}
+.footer-text, .custom-footer p, .footer-menu a {
+    font-family: var(--font-exo); font-style: normal !important; 
+    color: #d3d3d3; font-size: 0.8rem; line-height: 1.4; margin-bottom: 5px;
+}
+.footer-menu { padding-left: 0; margin-bottom: 0; }
+.footer-menu li { margin-bottom: 3px; }
+.footer-menu a { text-decoration: none; transition: color 0.3s; }
+.footer-menu a:hover { color: var(--merah-solid); }
+.footer-logo-img { height: 35px !important; width: auto; margin-right: 10px; }
+.ig-icon-wrapper img { width: 50px; height: 50px; margin-top: 5px; }
+.ig-icon-wrapper:hover img { transform: scale(1.1); transition: transform 0.3s ease; }
+.ig-icon-wrapper { color: transparent; }
+
